@@ -11,6 +11,7 @@ class FizzBuzz
 public:
 	FizzBuzz(){}
 
+	bool OutputString(int start, int end);
 	string GetString(int value);
 
 	bool IsMultipleOf3(int value);

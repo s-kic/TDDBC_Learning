@@ -63,3 +63,20 @@ TEST_F(FizzBuzzTest, GetString_ZERO)
 	EXPECT_EQ("ZERO", fizbuz->GetString(0));
 }
 
+TEST_F(FizzBuzzTest, OutputString_OK) 
+{
+	auto_ptr<FizzBuzz> fizbuz(new FizzBuzz());
+	EXPECT_TRUE(fizbuz->OutputString(0, 100));
+}
+
+TEST_F(FizzBuzzTest, OutputString_NG) 
+{
+	auto_ptr<FizzBuzz> fizbuz(new FizzBuzz());
+	EXPECT_FALSE(fizbuz->OutputString(100, 0));
+}
+
+TEST_F(FizzBuzzTest, OutputString_SameNumber) 
+{
+	auto_ptr<FizzBuzz> fizbuz(new FizzBuzz());
+	EXPECT_TRUE(fizbuz->OutputString(15, 15));
+}
